@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load bootstrap4 %}
+<a class="container padding-4 btn btn-primary" href="{% url 'categoria:facturas-update' proyecto.id %}">Actualizar</a>
+<a class="container padding-4 btn btn-primary" href="{% url 'categoria:facturas-index' %}">Todos los productos</a>
+<a class="container padding-4 btn btn-primary" href="{% url 'categoria:facturas-delete' proyecto.id %}">Eliminar</a>
+<li class="list-group-item"><h1>{{ proyecto.nombre }}</h1> <br> {{ proyecto.descripcion }}<br>{{ proyecto.fecha }}<br><img src="{{proyecto.imagen.url}}" width="150" height="150"></li>
+
+
+{% endblock %} 
